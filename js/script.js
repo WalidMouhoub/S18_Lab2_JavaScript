@@ -27,7 +27,7 @@ function exemple1()
 	// Modifier le code pour appliquer le changement pour toutes les cartes
 	// Il faut utiliser une boucle avec un index 
 	for(let i = 0; i < lesCartes.length; i++){
-		lesCartes[0].className = "coeur13";
+		lesCartes[i].className = "coeur13";
 	}
 }
 
@@ -39,7 +39,7 @@ function exemple2()
 	let lesCartes = document.getElementsByTagName("li");
 
 	for(let i = 0; i < lesCartes.length; i++){
-		
+		lesCartes[i].className = ("pique" + (i + 1))
 	}
 }
 
@@ -47,47 +47,115 @@ function exemple2()
 function exemple3()
 {	
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		lesCartes[i].className = ("coeur" + (8 + i))
+	}
 }
 
 //=================================================================
 function exemple4()
 { 	
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		lesCartes[i].className = ("carreau" + (6 - i))
+	}
 }
 
 //=================================================================
 function exemple5()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+
+		lesCartes[i].className = ("trefle" + (1 + (i * 2)))
+	}
 }
 //=================================================================
 function exemple6()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+
+		lesCartes[i].className = tabSortes[1] + ((i % 3) + 1)
+
+	}
 }
 
 //=================================================================
 function exemple7()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		if(i % 2 == 0){
+			lesCartes[i].className = tabSortes[2] + (i + 1)
+		}
+		else{
+			lesCartes[i].className = tabSortes[0] + (i + 1)
+		}
+		
+
+	}
 }
 
 //=================================================================
 function exemple8()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+
+		lesCartes[i].className = tabSortes[1] + (Math.floor(Math.random() * 13) + 1)
+
+	}
 }
 
 //=================================================================
 function exemple9()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	let nombre = Math.floor(Math.random() * 8) + 1
+
+	for(let i = 0; i < lesCartes.length; i++){
+
+		lesCartes[i].className = tabSortes[2] + (nombre + i)
+
+	}
+
+	
 }
 
 //=================================================================
 function exemple10()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+
+		lesCartes[i].className = tabSortes[randNumber(4)] + (Math.floor(Math.random() * 13) + 1)
+
+	}
 }
 
 
